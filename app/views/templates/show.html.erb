@@ -2,9 +2,11 @@
 
 <%#= render @template %>
 
+<%= append_javascript_pack_tag 'monaco-editor' %>
 
+<div style="height: calc(100vh - 120px); padding: 0;">
+  <div id="monaco-editor" style="height: 100%; width: 100%;"></div>
 
-<div>
   <%= link_to "Edit this template", edit_template_path(@template) %> |
   <%= link_to "Back to templates", templates_path %>
 
